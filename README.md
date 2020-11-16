@@ -1,8 +1,9 @@
 # Kernel Toolchains 
-# AOSP (GCC & Clang ) and Snapdragon clang
+# AOSP (GCC & Clang ) and Qualcomm Snapdragon Clang
 --------
-### Install latest version of Make from [**Here**](https://ftp.gnu.org/gnu/make).
-### These toolchains are only for Linux machines, don't messup with it in Windows.
+How to compile android kernel? Detailed Instructions [**Here**](https://forum.xda-developers.com/t/reference-how-to-compile-an-android-kernel.3627297/).
+Install latest version of Make from [**Here**](https://ftp.gnu.org/gnu/make).
+**Instructions here are only for Linux OS machines, don't get messed in Windows unless you know how to use properly.**
 --------
 Getting Started
 ==================================================
@@ -21,8 +22,8 @@ $ git clone --depth=1 https://github.com/pkm774/android-kernel-tools tools
 ```bash
 $	PATH="tools/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin:$PATH"
 $	PATH="tools/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin:$PATH"
-$	PATH="tools/clang/host/linux-x86/clang-r353983d/bin:$PATH"
-$	export LD_LIBRARY_PATH="tools/clang/host/linux-x86/clang-r353983d/lib64:$LD_LIBRARY_PATH"
+$	PATH="tools/clang/host/linux-x86/clang-r399163b/bin:$PATH"
+$	export LD_LIBRARY_PATH="tools/clang/host/linux-x86/clang-r399163b/lib64:$LD_LIBRARY_PATH"
 ```
 3. Export required flags
 
