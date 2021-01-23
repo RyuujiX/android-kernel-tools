@@ -22,8 +22,8 @@ $ git clone --depth=1 https://github.com/pkm774/android-kernel-tools tools
 ```bash
 $	PATH="tools/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin:$PATH"
 $	PATH="tools/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin:$PATH"
-$	PATH="tools/clang/host/linux-x86/clang-r399163b/bin:$PATH"
-$	export LD_LIBRARY_PATH="tools/clang/host/linux-x86/clang-r399163b/lib64:$LD_LIBRARY_PATH"
+$	PATH="tools/clang/host/linux-x86/clang-r407598/bin:$PATH"
+$	export LD_LIBRARY_PATH="tools/clang/host/linux-x86/clang-r407598/lib64:$LD_LIBRARY_PATH"
 ```
 3. Export required flags
 
@@ -65,7 +65,7 @@ $ make \
 	OBJCOPY=llvm-objcopy \
 	-j$(nproc --all)
 ```
-
+>> {DEVICE}_defconfig is the kernel config file used to compile kernel. Kernel binaries will be produced in **out** directory.
 ## For using Snapdragon clang:
 
 * Install gcc-aarch64-linux-gnu in Your machine. For Ubuntu:
@@ -103,12 +103,9 @@ $ make \
 	CC=clang \
 	-j$(nproc --all)
 ```
+>> {DEVICE}_defconfig is the kernel config file used to compile kernel. Kernel binaries will be produced in **out** directory.
 --------
-## NOTES:
--> $ {DEVICE}_defconfig is the kernel config file used to compile kernel. Kernel binaries are produced in **out** directory.
-
 #### # It will be easy to compile kernel with a bash script. Make a bash script in kernel folder and set toolchain path according to your folders.
---------
 ##### AOSP clang is taken from : [**Android Open Source Project**](https://source.android.com)
 ##### Snapdragon clang is taken from : [**developer.qualcomm.com**](https://developer.qualcomm.com/forums/software/snapdragon-llvm-compiler-android)
-##### Give a star if you liked my work :)
+##### Give a star if you liked my work.
