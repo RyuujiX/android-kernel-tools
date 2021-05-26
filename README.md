@@ -1,9 +1,9 @@
 # Kernel Toolchains 
 # AOSP (GCC & Clang ) and Qualcomm Snapdragon Clang
 --------
-How to compile android kernel? Detailed Instructions [**Here**](https://forum.xda-developers.com/t/reference-how-to-compile-an-android-kernel.3627297/).
-Install latest version of Make from [**Here**](https://ftp.gnu.org/gnu/make).
-**Instructions here are only for Linux OS machines, don't get messed in Windows unless you know how to use properly.**
+How to compile android kernel? Detailed Instructions [**Here**](https://forum.xda-developers.com/t/reference-how-to-compile-an-android-kernel.3627297/).  
+Install latest version of Make from [**Here**](https://ftp.gnu.org/gnu/make).  
+Instructions here are only for Linux OS machines, don't get messed in Windows unless you know how to use properly.
 --------
 Getting Started
 ==================================================
@@ -22,8 +22,8 @@ $ git clone --depth=1 https://github.com/pkm774/android-kernel-tools tools
 ```bash
 $	PATH="tools/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin:$PATH"
 $	PATH="tools/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin:$PATH"
-$	PATH="tools/clang/host/linux-x86/clang-r407598/bin:$PATH"
-$	export LD_LIBRARY_PATH="tools/clang/host/linux-x86/clang-r407598/lib64:$LD_LIBRARY_PATH"
+$	PATH="tools/clang/host/linux-x86/clang-r416183b/bin:$PATH"
+$	export LD_LIBRARY_PATH="tools/clang/host/linux-x86/clang-r416183b/lib64:$LD_LIBRARY_PATH"
 ```
 3. Export required flags
 
@@ -105,7 +105,7 @@ $ make \
 ```
 >> {DEVICE}_defconfig is the kernel config file used to compile kernel. Kernel binaries will be produced in **out** directory.
 --------
-#### # It will be easy to compile kernel with a bash script. Make a bash script in kernel folder and set toolchain path according to your folders.
-##### AOSP clang is taken from : [**Android Open Source Project**](https://source.android.com)
-##### Snapdragon clang is taken from : [**developer.qualcomm.com**](https://developer.qualcomm.com/forums/software/snapdragon-llvm-compiler-android)
-##### Give a star if you liked my work.
+#### # It will be easy to compile kernel with a bash script. Make a bash script in kernel folder and set toolchain path according to your folders.  
+AOSP clang is taken from : [**Android Open Source Project**](https://source.android.com).  
+Snapdragon clang is taken from : [**developer.qualcomm.com**](https://developer.qualcomm.com/forums/software/snapdragon-llvm-compiler-android).  
+Give a star if you liked my work.  
