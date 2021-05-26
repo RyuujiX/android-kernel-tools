@@ -54,8 +54,6 @@ $ make \
   
 $ make \
 	O=out \
-	clean \
-	mrproper \
 	CC=clang \
 	AR=llvm-ar \
 	NM=llvm-nm \
