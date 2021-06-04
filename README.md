@@ -10,9 +10,14 @@ Getting Started
 --------
 ### How to use these toolchains for compiling android Kernels ?
 --------
-1. Clone this toolchain repo in tools folder
+0. Clone this toolchain repo in tools folder
 ```bash
 $ git clone --depth=1 https://github.com/pkm774/android-kernel-tools tools
+```
+1. Install required packages, for Debian distros :
+```bash
+$ sudo apt-get update && sudo apt-get upgrade -y
+$ sudo apt-get install gcc-aarch64-linux-gnu lld llvm -y
 ```
 -> Now compile using AOSP clang or Snapdragon clang.
 
@@ -46,7 +51,6 @@ $ make \
 	CC=clang \
 	AR=llvm-ar \
 	NM=llvm-nm \
-	LD=ld.lld \
 	STRIP=llvm-strip \
 	OBJDUMP=llvm-objdump \
 	OBJCOPY=llvm-objcopy \
@@ -57,7 +61,6 @@ $ make \
 	CC=clang \
 	AR=llvm-ar \
 	NM=llvm-nm \
-	LD=ld.lld \
 	STRIP=llvm-strip \
 	OBJDUMP=llvm-objdump \
 	OBJCOPY=llvm-objcopy \
@@ -66,11 +69,6 @@ $ make \
 >> {DEVICE}_defconfig is the kernel config file used to compile kernel. Kernel binaries will be produced in **out** directory.
 ## For using Snapdragon clang:
 
-* Install gcc-aarch64-linux-gnu in Your machine. For Ubuntu:
-```bash
-$ sudo apt-get update && sudo apt-get upgrade -y
-$ sudo apt-get install -y gcc-aarch64-linux-gnu
-```
 2. Set path for the toolchain.
 
 ```bash
